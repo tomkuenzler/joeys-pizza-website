@@ -39,6 +39,21 @@ hr {
 ul {
     list-style: none;
 }
+
+a {
+    color: #777;
+}
+
+a:visited {
+    color: #777;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #333;
+}
+
 .brand,
 .address-bar {
     display: none;
@@ -120,7 +135,7 @@ ul {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    height: 400px;
+    height: 300px;
 }
 
 #pdf {
@@ -147,7 +162,12 @@ footer {
 
 footer p {
     margin: 0;
-    padding: 50px 0;
+    padding: 20px 0;
+}
+
+footer a:hover {
+    color: #333;
+    text-decoration: none;
 }
 
 @media screen and (min-width:768px) {
@@ -173,7 +193,7 @@ footer p {
         margin-right: 25px;
     }
 
-    .address-bar {
+/*    .address-bar {
         display: inherit;
         margin: 0;
         padding: 0 0 40px;
@@ -184,7 +204,7 @@ footer p {
         font-weight: 400;
         letter-spacing: 3px;
         color: #fff;
-    }
+    }*/
 
     .navbar {
         border-radius: 0;
@@ -205,7 +225,7 @@ footer p {
     }
 
     .nav>li>a {
-        padding: 20px;
+        padding: 20px 10px 20px 10px;
     }
 
     .navbar-nav>li>a {
@@ -217,11 +237,51 @@ footer p {
         float: none;
         margin: 0 auto;
         table-layout: fixed;
-        font-size: 1.15em;
+        font-size: 1.14em;
+        letter-spacing: 1px;
     }
+
+    .center-both {
+        display: flex;
+        align-items: center;
+        justify-content: center 
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .navbar-nav{
+        font-size: 1.25em;
+        display: inline-block;
+        float: none;
+        vertical-align: top;
+        text-align: center;
+    }
+
+    .navbar-nav > li {
+        display: inline-block;
+        float:none;
+    }
+
+    .navbar-nav>li>a {
+        line-height: 0;
+    }
+
+    .nav>li>a {
+        padding: 20px;
+    }     
 }
 
 @media screen and (min-width:1200px) {
+    
+    .navbar-nav{
+        font-size: 1.2em;
+    }
+
+    .nav>li>a {
+        padding: 20px;
+    }    
+
     .box:after {
         content: '';
         display: table;
@@ -236,5 +296,12 @@ footer p {
     #pdf2 {
         height: 200vh;
         max-height: 1130px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    #water-middle {
+        transform: translateY(20%);
     }
 }
